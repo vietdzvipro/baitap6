@@ -89,3 +89,16 @@ Ghi chú: Giải thích tại sao lại có SQL như vậy.
 ## Tổng quan về kết quả:
 - Truy vấn này sẽ trả về danh sách sinh viên thuộc lớp có tên chứa "KMT", được sắp xếp theo lớp từ bé đến lớn và trong mỗi lớp, sinh viên sẽ được sắp xếp theo tên từ A đến Z.
 - Lý do sử dụng COLLATE Vietnamese_CI_AS: Đây là cách để sắp xếp dữ liệu theo quy tắc tiếng Việt, phân biệt dấu (tức là "a" và "á" được xem là khác nhau), nhưng không phân biệt chữ hoa và chữ thường.
+
+## LIỆT KÊ CÁC SV NỮ NGÀNH KMT CÓ TRONG BẢNG SV
+
+- Dưới đây là code và các sinh viên nữ trong ngành kmt:
+
+![image](https://github.com/user-attachments/assets/e922f3f2-4149-4e9c-b1be-115805ce556d)
+
+## Làm sao biết sinh viên là "nữ"?
+- Bảng SV không có cột gioitinh (giới tính)? Vậy phải suy đoán từ tên.
+## Ta có thể giả định rằng:
+- Các sinh viên có tên như: “Lan”, “Hương”, “Hạnh”, “Mai”, “Trang”, “Ngọc”,… là nữ.
+- Điều này không hoàn toàn chính xác, nhưng là cách tạm chấp nhận được nếu không có cột giới tính.
+- Do đó, ta có thể lọc tên có chứa các chuỗi “Lan”, “Hương”, v.v. bằng LIKE.
