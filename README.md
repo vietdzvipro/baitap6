@@ -68,6 +68,24 @@ Ghi chú: Giải thích tại sao lại có SQL như vậy.
 
 ![image](https://github.com/user-attachments/assets/9f11a3ef-2779-49d6-bc70-c77da460872e)
 
+##  BẢNG SV CÓ HƠN 9000 ROWS, HÃY LIỆT KÊ TẤT CẢ CÁC SV NGÀNH KMT, SẮP XẾP THEO TÊN VÀ HỌ ĐỆM, KIỂU TIẾNG  VIỆT, GIẢI THÍCH
 
+- Để có thể xem được dữ liệu khi dữ liệu quá lớn thì ta làm theo các bước sau đây để có thể xem hết và truy vấn được hơn 9000rows
 
+![image](https://github.com/user-attachments/assets/63a4c43e-3240-4c99-89fe-47297c24167b)
 
+![image](https://github.com/user-attachments/assets/dc9aec91-d06d-43d5-8d26-d9860fe65abb)
+
+- Sau khi chỉnh cài đặt xong ta sẽ dùng lệnh để thực hiện yêu cầu:
+
+![image](https://github.com/user-attachments/assets/e8a000f3-1c03-47b3-8745-bfa3ddee0884)
+
+## Giải thích:
+- SELECT TOP (10000)
+- SELECT: Đây là lệnh SQL dùng để lấy dữ liệu từ bảng.
+- TOP (10000): Lấy tối đa 10.000 dòng kết quả. Điều này giúp bạn giới hạn số lượng dòng dữ liệu, tránh việc truy vấn quá nhiều dữ liệu mà có thể gây ra lỗi hoặc quá tải trong môi trường SQL. Nếu bảng có ít dữ liệu hơn, hệ thống vẫn sẽ trả về toàn bộ dữ liệu có sẵn.
+- Lý do sử dụng TOP: Trong trường hợp bạn có bảng có quá nhiều dòng (hơn 9000 dòng như bạn đã nói), dùng TOP (10000) sẽ giúp truy vấn không bị gián đoạn.
+
+## Tổng quan về kết quả:
+- Truy vấn này sẽ trả về danh sách sinh viên thuộc lớp có tên chứa "KMT", được sắp xếp theo lớp từ bé đến lớn và trong mỗi lớp, sinh viên sẽ được sắp xếp theo tên từ A đến Z.
+- Lý do sử dụng COLLATE Vietnamese_CI_AS: Đây là cách để sắp xếp dữ liệu theo quy tắc tiếng Việt, phân biệt dấu (tức là "a" và "á" được xem là khác nhau), nhưng không phân biệt chữ hoa và chữ thường.
