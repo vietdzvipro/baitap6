@@ -70,13 +70,7 @@ Ghi chú: Giải thích tại sao lại có SQL như vậy.
 
 ##  BẢNG SV CÓ HƠN 9000 ROWS, HÃY LIỆT KÊ TẤT CẢ CÁC SV NGÀNH KMT, SẮP XẾP THEO TÊN VÀ HỌ ĐỆM, KIỂU TIẾNG  VIỆT, GIẢI THÍCH
 
-- Để có thể xem được dữ liệu khi dữ liệu quá lớn thì ta làm theo các bước sau đây để có thể xem hết và truy vấn được hơn 9000rows
-
-![image](https://github.com/user-attachments/assets/63a4c43e-3240-4c99-89fe-47297c24167b)
-
-![image](https://github.com/user-attachments/assets/dc9aec91-d06d-43d5-8d26-d9860fe65abb)
-
-- Sau khi chỉnh cài đặt xong ta sẽ dùng lệnh để thực hiện yêu cầu:
+- Để xem được 9000 rows thì ta chỉ cần dùng select top (10000) là được
 
 ![image](https://github.com/user-attachments/assets/e8a000f3-1c03-47b3-8745-bfa3ddee0884)
 
